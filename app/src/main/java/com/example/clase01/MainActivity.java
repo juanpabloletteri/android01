@@ -18,7 +18,12 @@ public class MainActivity extends AppCompatActivity {
         TextView textoVista = (TextView) super.findViewById(R.id.textoVista);
         EditText textoIngreso = (EditText) super.findViewById(R.id.textoIngreso);
 
+        String texto = textoIngreso.getText().toString();
 
+        Listener miListener =  new Listener(this);
+
+        btnCopiar.setOnClickListener(miListener);
+        btnBorrar.setOnClickListener(miListener);
 
     }
 }
